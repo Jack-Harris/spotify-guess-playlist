@@ -1,0 +1,31 @@
+<template>
+  <require from="bootstrap/dist/css/bootstrap.css"></require>
+  <require from="app.css"></require>
+  <div class="wrapper">
+    <div class="row">
+      <center id="mainContent">
+        <div id="songImgWrapper">
+          <h1 id="answerText" textcontent.bind="answerText"></h1>
+          <image src.bind="curSong.image" click.delegate="showPlaylist()" id="songImage"></image>
+        </div>
+        <h1>${curSong.song}</h1>
+        <p>${curSong.artist}</p>
+        <br>
+      <div class="btn-group">
+        <button class="btn btn-primary" click.delegate="lastSong()"><<</button>
+        <buttin class="btn btn-primary" click.delegate="pauseSong()">||</buttin>
+        <button class="btn btn-primary" click.delegate="nextSong()">>></button>
+      </div>
+      </center>
+    </div>
+  </div>
+
+  
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+
+    console.log("test");
+  </script>
+
+</template>
